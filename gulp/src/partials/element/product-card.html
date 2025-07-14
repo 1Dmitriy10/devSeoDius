@@ -1,0 +1,82 @@
+<div class="product-card">
+  <div class="product-card__top">
+    <div class="product-card__stickers">
+      @if (stickers.new === true) {
+        <div class="stickers stickers-new">Новинка</div>
+      }
+      @if (stickers.sale === true) {
+        <div class="stickers stickers-sale">-20%</div>
+      }
+    </div>
+    <div class="product-card__control product-control">
+      <button class="product-control__item --chart">
+        <svg>
+          <use xlink:href="./assets/img/sprite.svg#chart"></use>
+        </svg>
+      </button>
+      <button class="product-control__item --heart">
+        <svg>
+          <use xlink:href="./assets/img/sprite.svg#heart"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="product-card__images">
+      <div class="swiper product-card__slider">
+        <a href="/product-detail.html" class="swiper-wrapper">
+          <div class="swiper-slide">
+            <picture>
+              <source srcset="./assets/img/product/product.webp" type="image/webp">
+              <source srcset="./assets/img/product/product.png" type="image/png">
+              <img src="./assets/img/product/product.png" alt="product-1">
+            </picture>
+          </div>
+          <div class="swiper-slide">
+            <picture>
+              <source srcset="./assets/img/product/pack_stena.webp" type="image/webp">
+              <source srcset="./assets/img/product/pack_stena.png" type="image/png">
+              <img src="./assets/img/product/pack_stena.png" alt="product-1">
+            </picture>
+          </div>
+          <div class="swiper-slide">
+            <picture>
+              <source srcset="./assets/img/product/product.webp" type="image/webp">
+              <source srcset="./assets/img/product/product.png" type="image/png">
+              <img src="./assets/img/product/product.png" alt="product-1">
+            </picture>
+          </div>
+          <div class="swiper-slide">
+            <picture>
+              <source srcset="./assets/img/product/product.webp" type="image/webp">
+              <source srcset="./assets/img/product/product.png" type="image/png">
+              <img src="./assets/img/product/product.png" alt="product-1">
+            </picture>
+          </div>
+          <div class="swiper-slide">
+            <picture>
+              <source srcset="./assets/img/product/product.webp" type="image/webp">
+              <source srcset="./assets/img/product/product.png" type="image/png">
+              <img src="./assets/img/product/product.png" alt="product-1">
+            </picture>
+          </div>
+        </a>
+        <div class="swiper-pagination"></div>
+      </div>
+  </div>
+
+  <div class="product-card__content">
+    <div class="product-card__name title-h4"><a href="#" class="">@name</a></div>
+    <p class="product-card__specifications">@specifications</p>
+  </div>
+  <div class="product-card__bottom">
+    <div class="product-card__price">
+      @if (price.old != '') {
+        <div class="product-card__price-old"> @price.old руб.</div>
+      }
+      <div class="product-card__price-regular">@price.regular руб.<span>/уп</span></div>
+    </div>
+    <a href="#" class="btn btn-primary btn-icons btn-icons--add-card">В корзину</a>
+  </div>
+
+</div>

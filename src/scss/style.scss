@@ -1,0 +1,73 @@
+//=============================внешние импорты===================================
+// @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+//=============================рутовые стили===================================
+@import "fonts";
+@import "variables";
+@import "mixin";
+@import "reset";
+@import "root";
+@import "typography";
+@import "vendor";
+
+
+//========основные стили============
+
+//==================================
+html {
+    scrollbar-color: rgb(156, 156, 156) #f1f1f1;
+    overflow: overlay;
+
+}
+
+body {
+    font-family: var(--ff);
+
+}
+
+section {
+    margin-bottom: clamp-px(30, 50);
+}
+
+.portfolio-prev-second__container {
+    display: flex;
+    flex-direction: column
+}
+
+//================Импорты компонентов=====================
+
+@import "./components/header";
+@import "./components/footer";
+@import "./components/main-banner";
+@import "./components/how-we-help";
+@import "./components/price-prev";
+@import "./components/primary-info-box";
+@import "./components/time-result";
+@import "./components/steps";
+@import "./components/why";
+@import "./components/readiness";
+@import "./components/calculator";
+@import "./components/what-included";
+@import "./components/main-form";
+@import "./components/why-profitable";
+@import "./components/how-we-work";
+@import "./components/portfolio-prev";
+@import "./components/faq-prev";
+@import "./components/differences";
+@import "./components/results-seo";
+@import "./modal";
+@import "./components/principles";
+@import "./components/gradient-block";
+@import "./components/blog";
+@import "./components/blog-detail";
+@import "./components/about";
+@import "./components/slim-banner";
+@import "./components/clients-choose";
+@import "./components/block-more";
+@import "./components/details";
+@import "./components/internet-magazin";
+
+//================Атомарные стили=====================
+@import "./vendor/atomar";

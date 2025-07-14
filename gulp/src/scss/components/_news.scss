@@ -1,0 +1,175 @@
+.news {
+    margin-bottom: 57px;
+
+    @include respond-to ("tel") {
+        margin-bottom: 47px;
+    }
+}
+
+.our-life__description {
+    max-width: 603px;
+    margin-bottom: 47px;
+
+    @include respond-to("tel") {
+        margin-bottom: 22px;
+    }
+}
+
+.news__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.news__title {
+    margin-bottom: 75px;
+    font-size: clamp(1.4375rem, 1.2403rem + 0.8414vw, 2.25rem);
+
+    @include respond-to("tel") {
+        margin-bottom: 21px;
+    }
+}
+
+.news__tab-wrap {
+    display: flex;
+    margin-bottom: 63px;
+
+    @include respond-to ("tel") {
+        margin-bottom: 50px;
+    }
+}
+
+.news__tab__name {
+    @include font(var(--fw-500), clamp(0.875rem, 0.8447rem + 0.1294vw, 1rem), var(--primary-black), var(--lh-150));
+    margin-right: -20px;
+
+    @include respond-to("tab") {
+        width: 100%;
+    }
+
+}
+
+.tabs__title-box_news {
+    gap: 14px 48px;
+    margin-bottom: 44px;
+    flex-wrap: wrap;
+
+    @include respond-to("tab") {
+        flex-direction: row;
+        gap: 9px 40px;
+        margin-bottom: 24px;
+    }
+}
+
+.tabs__title {
+    @include font(var(--fw-300), clamp(0.875rem, 0.8447rem + 0.1294vw, 1rem), var(--primary-black), var(--lh-150));
+    transition: 0.3s;
+
+    &:hover {
+        color: var(--primary-green);
+        text-decoration: underline;
+    }
+}
+
+._tabs-js {
+    width: 100%;
+}
+
+.tabs__item-content-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px 18px;
+    width: 100%;
+}
+
+.card-item {
+    position: relative;
+    flex: 0 1 calc((100% - 2 * 18px) / 3);
+    display: flex;
+    flex-direction: column;
+    min-height: 382px;
+    overflow: hidden;
+
+    &:hover {
+        &>.card-item-title {
+            transition: 0.3s;
+            color: var(--primary-green);
+        }
+
+        &>.card-link {
+            transition: 0.3s;
+            color: var(--primary-green);
+
+            &::before {
+                transition: 0.3s;
+                background-color: var(--primary-green);
+            }
+        }
+    }
+
+    @include respond-to("tab") {
+        flex: 0 1 calc((100% - 1 * 18px) / 2);
+    }
+
+    @include respond-to("tel") {
+        flex: 0 1 100%;
+        min-height: 354px;
+    }
+}
+
+.card-item-img-wrap {
+    position: relative;
+    width: 100%;
+    height: 251px;
+
+    @include respond-to("tel") {
+        height: 220px;
+    }
+}
+
+.card-item-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-item-mask {
+    position: absolute;
+    top: 57%;
+    right: 40px;
+
+    @include respond-to ("tel") {
+        top: 55%;
+        right: 30px;
+    }
+}
+
+.card-item-title {
+    position: relative;
+    z-index: 2;
+    font-size: clamp(1.0625rem, 1.017rem + 0.1942vw, 1.25rem);
+    line-height: var(--lh-140);
+    max-width: 370px;
+    transition: 0.3s;
+
+    @include respond-to ("tel") {
+        padding: 0 19px;
+    }
+}
+
+.card-link_news {
+    margin-top: auto;
+    position: relative;
+    z-index: 2;
+
+    @include respond-to ("tel") {
+        padding: 0 19px;
+        margin-bottom: 24px;
+    }
+}
+
+.btn_news {
+    align-self: center;
+}

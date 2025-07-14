@@ -1,0 +1,123 @@
+.values {
+    margin-bottom: 140px;
+
+    @include respond-to ("tab") {
+        margin-bottom: 37px
+    }
+}
+
+.values__container {}
+
+.values__title {
+    margin-bottom: 45px;
+
+    @include respond-to ("tab") {
+        margin-bottom: 24px
+    }
+}
+
+.values__box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 20px;
+
+    @include respond-to("tab") {
+        display: none;
+    }
+}
+
+.values__box-mob {
+    display: none;
+
+    @include respond-to("tab") {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.values__wrap-item {
+    position: relative;
+}
+
+.values__item {
+    position: relative;
+    min-height: 420px;
+    flex: 0 1 calc((100% - 2 * 20px) / 3);
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    padding: 34px 38px;
+    background-color: var(--primary-grey);
+
+    &:hover {
+        &>.values__item-text {
+            opacity: 1;
+            transition: 0.3s;
+        }
+    }
+
+    @include respond-to ("nout") {
+        flex: 0 1 calc((100% - 1 * 20px) / 2);
+    }
+
+    @include respond-to ("tab") {
+        flex: 0 1 100%;
+        min-height: 90px;
+        padding: 27px 19px
+    }
+}
+
+.values_spoiler-btn {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background-color: grey;
+}
+
+.values__item_yel {
+    background: var(--gradient-yellow)
+}
+
+.values__item_gre {
+    background: var(--secondary-gradient-green)
+}
+
+.values__item_pin {
+    background: var(--gradient-pink)
+}
+
+.values__item-bg-img {
+    position: absolute;
+    bottom: 23px;
+    left: 21px;
+
+    @include respond-to ("tab") {
+        bottom: auto;
+        left: auto;
+        right: 44px;
+        top: 5px;
+        width: 80px;
+    }
+}
+
+.values__item-title {
+    margin-bottom: 11px;
+
+    @include respond-to ("tab") {
+        @include font(var(--fw-400), var(--fs-20), var(--secondary-black), var(--lh-100));
+        max-width: 200px;
+    }
+}
+
+.values__item-text {
+    margin-bottom: 10px;
+    line-height: var(--lh-120);
+    opacity: 0;
+    transition: 0.3s;
+
+    @include respond-to("tab") {
+        opacity: 1;
+    }
+}

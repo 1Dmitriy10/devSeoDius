@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('html/libs/head.html',{
+"title": "modal"
+})
+
+<body>
+    @@include('html/libs/header.html');
+    <main class="ui-kit">
+
+        <button class="btn btn_gradient" data-fancybox data-src='#primary-popup-form'>
+            <p>Заказать SEO-продвижение</p>
+        </button>
+
+        <div id="primary-popup-form" class="popup-form">
+
+            <button class="f-button is-close-btn ">
+                <svg id="Cross_1_" enable-background="new 0 0 64 64" viewBox="0 0 64 64"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                        <path
+                            d="m63.437 10.362-9.8-9.8c-.75-.75-1.966-.75-2.717 0l-18.92 18.922-18.921-18.921c-.75-.75-1.966-.75-2.717 0l-9.8 9.8c-.75.75-.75 1.966 0 2.717l18.922 18.92-18.921 18.921c-.75.75-.75 1.966 0 2.717l9.8 9.8c.75.75 1.966.75 2.717 0l18.92-18.922 18.921 18.921c.75.75 1.966.75 2.717 0l9.8-9.8c.75-.75.75-1.966 0-2.717l-18.922-18.92 18.921-18.921c.751-.749.751-1.966 0-2.717z"
+                            fill="rgb(0,0,0)" />
+                    </g>
+                </svg>
+            </button>
+
+            <div class="popup-form-title">
+                Бесплатный SEO-аудит вашего сайта
+            </div>
+
+            <div class="popup-form__input-box">
+
+                <div class="form__row-two">
+                    <div class="form__row">
+                        <input type="text" name="address" placeholder="Адрес сайта*">
+                    </div>
+
+                    <div class="form__row">
+                        <input type="text" name="name" placeholder="Имя">
+                    </div>
+
+                </div>
+
+                <div class="form__row-two">
+                    <div class="form__row">
+                        <input class="phone" type="text" name="tel" placeholder="Телефон*">
+                    </div>
+
+                    <div class="form__row">
+                        <input type="email" name="email" placeholder="E-mail (не обязательно)">
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div class="popup-form-subtitle">
+                Мне нужен аудит, потому что:
+            </div>
+
+            <div class="popup-form__checkbox-box">
+                <div class="form__input-col">
+                    <input name="promotion" type="checkbox">
+                    <label for="promotion">
+                        Я хочу продвигать свой сайт в студии DIUS
+                    </label>
+                </div>
+
+                <div class="form__input-col">
+                    <input name="recommendations" type="checkbox">
+                    <label for="recommendations">
+                        Я хочу получить рекомендации по улучшениям на сайте
+                    </label>
+                </div>
+
+                <div class="form__input-col">
+                    <input name="errors" type="checkbox">
+                    <label for="errors">
+                        Я хочу узнать какие ошибки есть на моем сайте
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="popup-form__btn-box">
+                <div class="captcha"></div>
+
+                <input class="captcha_input" type="text" placeholder="Введите код*">
+
+                <button class="btn btn_red captcha_refresh-code">Обновить код</button>
+
+            </div>
+
+            <div class="agree-box">
+                <input class="agree-check" type="checkbox">
+                <span>Оставляя номер телефона, вы подтверждаете согласие на обработку ваших данных
+                </span>
+            </div>
+
+            <button class="btn btn_gradient primary-popup-form__submit">
+                <p>Заказать SEO-продвижение</p>
+            </button>
+        </div>
+
+    </main>
+    @@include('html/libs/footer.html');
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @include('partials/base/head.html', {
+    "title": "Страница не найдена"
+  })
+<body>
+@include('partials/element/header.html')
+<main class="main">
+  <div class="wrapper">
+    <div class="page-404">
+      <div class="page-404-number">404</div>
+      <h1 class="page-title">Страница не найдена</h1>
+      <p class="page-404-text">Страница, на которую вы пытаетесь перейти не найдена или не существует</p>
+      <a href="#" class="btn btn-primary">Вернуться на главную</a>
+    </div>
+  </div>
+</main>
+@include('partials/element/footer.html')
+</body>
+</html>

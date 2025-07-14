@@ -1,0 +1,42 @@
+// ============== [Пагинация] =================
+
+.pagination {
+    display: flex;
+}
+
+.pagination__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.pagination__list-item {}
+
+.pagination__item-link {
+    width: clamp-px(30, 50);
+    height: clamp-px(30, 50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: clamp-px(8, 10);
+    border: 1px solid #d7d7d7;
+    background-color: transparent;
+    font-size: clamp-px(14, 16);
+    line-height: 120%;
+    color: var(--black-3);
+    font-weight: 400;
+    transition: 0.3s;
+
+
+    &:hover {
+        background-color: var(--grey);
+        transition: 0.3s;
+    }
+
+    &.active {
+        background-color: var(--red);
+        color: var(--white);
+        border: 1px solid transparent;
+        transition: 0.3s;
+    }
+}

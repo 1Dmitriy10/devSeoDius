@@ -1,0 +1,63 @@
+.principles {
+    margin-bottom: clamp-px(30, 40);
+}
+
+.principles__container {
+    display: flex;
+    flex-direction: column;
+    padding: clamp-px(20, 36) clamp-px(15, 29);
+    border-radius: clamp-px(20, 30);
+
+    background: url('../images/principles/principles-bg.png') center /contain no-repeat,
+        var(--pink);
+
+    @include respond-to("tab") {
+        background: var(--pink);
+    }
+}
+
+.principles__card-box {
+    counter-reset: dec 0;
+}
+
+.principles__card {
+    counter-increment: dec 1;
+}
+
+.principles__card-title {
+    padding-left: clamp-px(35, 50);
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: clamp-px(18, 20);
+    line-height: 120%;
+    color: var(--black-2);
+    font-weight: 400;
+    font-family: "Roboto Condensed";
+    margin-bottom: clamp-px(15, 17);
+
+    &::before {
+        content: counter(dec);
+        position: absolute;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100%;
+        width: clamp(1.5625rem, 1.3644366197rem + 0.8450704225vw, 2.125rem);
+        height: clamp(1.5625rem, 1.3644366197rem + 0.8450704225vw, 2.125rem);
+        border: 1px solid var(--red);
+        font-size: clamp(0.75rem, 0.7059859155rem + 0.1877934272vw, 0.875rem);
+        color: var(--red);
+        font-weight: 300;
+    }
+}
+
+.principles__card-text {
+    padding-left: clamp-px(30, 50);
+    font-size: clamp-px(14, 15);
+    line-height: 120%;
+    color: var(--black-2);
+    font-weight: 300;
+    font-family: "Roboto Condensed";
+}

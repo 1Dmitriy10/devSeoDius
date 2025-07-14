@@ -1,0 +1,92 @@
+//основные импорты
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+@import "fonts";
+@import "variables";
+@import "mixin";
+@import "reset";
+@import "root";
+@import "typography";
+
+//========основные стили============
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.page__title {
+    padding-top: 63px;
+    padding-bottom: 29px;
+
+    @include respond-to ("tel") {
+        padding-bottom: 25px;
+    }
+}
+
+.hr {
+    width: 100%;
+    height: 1px;
+    background: var(--secondary-gray);
+}
+
+.btn {
+    // border-radius: 10px;
+    border-radius: 4px;
+    padding: 17px;
+    min-width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-green);
+
+    @include respond-to ("tel") {
+        padding: 13px 17px;
+        border-radius: 4px;
+        min-width: 199px;
+        ;
+    }
+}
+
+.btn_transparent {
+    background-color: transparent;
+    border: 2px solid var(--primary-white);
+}
+
+.card-link {
+    @include font(var(--fw-400), clamp(0.75rem, 0.6893rem + 0.2589vw, 1rem), var(--primary-red), var(--lh-150));
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: 0.3s;
+
+    &:before {
+        content: "";
+        display: block;
+        width: 10px;
+        height: 1px;
+        background-color: var(--primary-red);
+        transition: 0.3s;
+    }
+}
+
+
+//==================================
+
+//Импорты блоков и компонентов
+@import "./components/header";
+@import "./components/burgerMenu";
+@import "./components/breadcrambs";
+@import "./components/corporate-about";
+@import "./components/values";
+@import "./components/info";
+@import "./components/life";
+@import "./components/plus";
+@import "./components/what-say";
+@import "./components/stories";
+@import "./components/interview";
+@import "./components/news";
+@import "./components/tabs";
+@import "./components/album";
+@import "./components/calendar";
+@import "./components/spoiler";
+@import "./components/footer";

@@ -1,0 +1,17 @@
+//=========сетка брейкпоинтов==============
+$breakpoints: (
+    "tel-old": (max-width: 419.98px,
+    ),
+    "tel": (max-width: 575.98px,
+    ),
+    "tab": (max-width: 767.98px,
+    ),
+    "nout": (max-width: 991.98px,
+    ),
+    "pc-old": (max-width: 1199.98px,
+    ),
+    "pc": (max-width: 1399.98px,
+    ),
+);
+
+$gap: 20px;

@@ -1,0 +1,22 @@
+.details {
+    margin-bottom: 15px;
+}
+
+.details__container {
+    display: flex;
+    flex-direction: column;
+
+    & ul {
+        display: flex;
+        flex-direction: column;
+        gap: clamp-px(15, 20);
+
+        & li {
+            font-size: clamp-px(14, 16);
+            line-height: 120%;
+            color: var(--black);
+            font-weight: 300;
+
+        }
+    }
+}

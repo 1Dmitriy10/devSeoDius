@@ -1,0 +1,92 @@
+.gradient-block {}
+
+.gradient-block__container {
+    display: flex;
+    flex-direction: column;
+    padding: clamp-px(20, 39) clamp-px(15, 28);
+    max-height: fit-content;
+
+    &:hover {
+        &::after {
+            opacity: 1;
+        }
+    }
+
+    & .title {
+        margin-bottom: clamp-px(15, 20);
+        position: relative;
+        z-index: 3;
+    }
+}
+
+.gradient-block__subtitle {
+    font-size: clamp-px(14, 16);
+    color: var(--black);
+    font-weight: 300;
+    margin-bottom: clamp-px(30, 55);
+    position: relative;
+    z-index: 3;
+}
+
+.gradient-block__card {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    gap: clamp-px(15, 19);
+}
+
+.gradient-block__card-top {
+    display: flex;
+    gap: clamp-px(20, 27);
+    align-items: center;
+}
+
+.gradient-block__card-icon {
+    width: clamp-px(25, 40);
+    min-width: clamp-px(25, 40);
+    height: clamp-px(25, 40);
+}
+
+.gradient-block__card-title {
+    font-size: clamp-px(18, 20);
+    line-height: 120%;
+    color: var(--black-2);
+    font-weight: 400;
+}
+
+.gradient-block__card-text {
+    font-size: clamp-px(12, 14);
+    line-height: 130%;
+    color: var(--black-2);
+    font-weight: 300;
+    margin-left: clamp-px(45, 64);
+}
+
+.gradient-block_card-span {
+    & .card {
+
+        &:nth-child(4),
+        &:nth-child(5) {
+            flex: 1 1 calc((100% - 86px * 1) / 2);
+        }
+
+        @include respond-to("nout") {
+
+            &:nth-child(4),
+            &:nth-child(5) {
+                flex: 0 1 calc((100% - 86px * 1) / 2);
+            }
+        }
+
+        @include respond-to("tel") {
+
+            &:nth-child(4),
+            &:nth-child(5) {
+                flex: 0 1 100%;
+            }
+        }
+    }
+
+
+}

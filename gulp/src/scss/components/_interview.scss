@@ -1,0 +1,125 @@
+.interview {
+    background:
+        url("../img/interview/interview-bg.png") no-repeat 100% 100% / 20%,
+        var(--gradient-green), ;
+    ;
+    border-radius: 60px 60px 0 0;
+
+    @include respond-to ("tab") {
+        border-radius: 25px 25px 0 0;
+    }
+}
+
+.interview__container {
+    display: flex;
+    flex-direction: column;
+    padding: 77px 0;
+
+    @include respond-to ("tab") {
+        padding: 42px 0;
+    }
+}
+
+.interview__title {
+    color: var(--primary-white);
+    margin-bottom: 38px;
+    font-size: clamp(1.4375rem, 1.2403rem + 0.8414vw, 2.25rem);
+
+    @include respond-to ("tab") {
+        margin-bottom: 20px;
+    }
+}
+
+.interview__subtitle {
+    color: var(--primary-white);
+    max-width: 573px;
+    margin-bottom: 42px;
+    font-size: clamp(0.9375rem, 0.9223rem + 0.0647vw, 1rem);
+
+    @include respond-to ("tab") {
+        margin-bottom: 20px;
+        margin-bottom: 33px;
+    }
+}
+
+.interview__content-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+    margin-bottom: 50px;
+
+}
+
+.interview__item {
+    position: relative;
+    flex: 0 1 calc((100% - 1 * 18px) / 2);
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    min-height: 300px;
+    padding: 36px 48px;
+    overflow: hidden;
+
+    &:hover {
+        &>.interview__item-content-box>.card-link {
+            transition: 0.3s;
+            color: var(--primary-green);
+
+            &::before {
+                transition: 0.3s;
+                background-color: var(--primary-green);
+            }
+        }
+
+        &>.interview__img {
+            transition: 0.3s;
+            transform: scale(120%);
+        }
+    }
+
+    @include respond-to ("nout") {
+        flex: 0 1 100%;
+    }
+
+    @include respond-to ("tab") {
+        min-height: 200px;
+        padding: 20px 19px;
+    }
+}
+
+.interview__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.interview__item-content-box {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column
+}
+
+.interview__item-title {
+    @include font(var(--fw-400), clamp(1.0625rem, 0.9411rem + 0.5178vw, 1.5625rem), var(--primary-black), var(--lh-120));
+    margin-bottom: 10px;
+    max-width: 217px;
+
+    @include respond-to ("tab") {
+        max-width: 148px;
+    }
+}
+
+.card-link_interview {
+    margin-top: auto;
+}
+
+.btn_interview {
+    align-self: center;
+}

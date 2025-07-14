@@ -1,0 +1,7 @@
+.principles__container.services {
+    background: url("../images/principles/services-img-1.png") center / 35% no-repeat, var(--pink);
+
+    @include respond-to("tab") {
+        background: var(--pink);
+    }
+}

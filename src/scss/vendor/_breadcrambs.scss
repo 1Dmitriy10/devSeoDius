@@ -1,0 +1,38 @@
+// =========== [Хлебные крошки] ===============
+
+.breadcrambs {
+    padding-top: 20px !important;
+    padding-bottom: clamp-px(20, 32) !important;
+    margin-bottom: 0 !important;
+}
+
+.breadcrambs__container {}
+
+.breadcrambs__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+
+    font-size: clamp-px(12, 14);
+    line-height: 120%;
+    color: #999999;
+    font-weight: 300;
+    font-family: "Roboto Condensed";
+}
+
+.breadcrambs__list-item {
+    font-size: clamp-px(12, 14);
+    line-height: 120%;
+    color: #999999;
+    font-weight: 300;
+    font-family: "Roboto Condensed";
+}
+
+.breadcrambs__item-link {
+    font-size: clamp-px(12, 14);
+    line-height: 120%;
+    text-decoration: underline;
+    color: #999999;
+    font-weight: 300;
+    font-family: "Roboto Condensed";
+}

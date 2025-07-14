@@ -1,0 +1,246 @@
+.price-table {
+    overflow-x: auto;
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: clamp-px(30, 40);
+    transform: rotate(180deg);
+    // scroll-margin-top: 20px;
+    padding-bottom: 10px;
+
+    &>table {
+        border-collapse: collapse;
+        width: 100%;
+        min-width: 710px;
+        transform: rotate(180deg);
+    }
+
+    & .tab-title-row {
+        max-width: 90%;
+        background-color: var(--ellows);
+
+        &>th {
+            padding: clamp-px(15, 25) 0;
+            text-align: left;
+            font-size: clamp-px(16, 20);
+            color: var(--black);
+            font-weight: 400;
+            font-family: "Roboto";
+
+            &:first-child {
+                border-radius: clamp-px(20, 30) 0 0 clamp-px(20, 30);
+                padding-left: clamp-px(30, 60);
+            }
+
+            &:last-child {
+                border-radius: 0 clamp-px(20, 30) clamp-px(20, 30) 0;
+                padding-right: clamp-px(30, 60);
+            }
+
+            @include respond-to("nout") {
+                text-align: center;
+                padding: 15px;
+            }
+
+        }
+    }
+
+    & tr {
+        transition: 0.5s;
+        background: transparent;
+        position: relative;
+
+
+        &:not(.tab-title-row) {
+            // min-height: 107px;
+            border-bottom: 1px solid var(--ellows);
+        }
+
+        &>td {
+
+            position: relative;
+            z-index: 3;
+            transition: 0.3s;
+            max-width: 424px;
+            padding: 25px 0;
+
+            @include respond-to("nout") {
+                text-align: center;
+                padding: 15px;
+            }
+
+            &:first-child {
+                border-radius: 30px 0 0 30px;
+                padding-left: 60px;
+
+                &::before {
+                    transition: 0.3s;
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    background-color: transparent;
+                    width: 100%;
+                    z-index: -1;
+                    border-radius: 30px 0 0 30px;
+                }
+            }
+
+            &:last-child {
+                border-radius: 0 30px 30px 0;
+                padding-right: 60px;
+
+                &::before {
+                    transition: 0.3s;
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    background-color: transparent;
+                    width: 100%;
+                    z-index: -1;
+                    border-radius: 30px 0 0 30px;
+                }
+            }
+
+            &:nth-child(odd) {
+                font-size: clamp-px(14, 18);
+                line-height: 130%;
+                color: var(--black);
+                font-weight: 300;
+                transition: 0.3s;
+            }
+
+            &:nth-child(even) {
+                font-size: clamp-px(14, 17) 17px;
+                line-height: 130%;
+                color: var(--black-3);
+                font-weight: 300;
+            }
+        }
+
+        &:hover:not(.tab-title-row) {
+            transition: 0.5s;
+            background: var(--sand-3);
+
+            &>td {
+                transition: 0.3s;
+                max-width: 424px;
+                padding: 25px 0;
+
+                &:first-child {
+                    position: relative;
+                    background-color: #fdf9f4;
+
+                    &::before {
+                        transition: 0.3s;
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: -20px;
+                        height: 100%;
+                        background-color: #fdf9f4;
+                        width: 100%;
+                        z-index: -1;
+                        border-radius: 30px 0 0 30px;
+                    }
+                }
+
+
+                &:last-child {
+                    position: relative;
+                    background-color: #fdf9f4;
+
+                    &::before {
+                        transition: 0.3s;
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: auto;
+                        right: -20px;
+                        height: 100%;
+                        background-color: #fdf9f4;
+                        width: 100%;
+                        z-index: -1;
+                        border-radius: 0 30px 30px 0;
+                    }
+
+                    & .btn_border-gradient {
+
+                        margin-left: auto;
+
+                        &>p {
+                            transition: 0.3s;
+                            color: var(--white);
+                        }
+
+                        &::after {
+                            transition: 0.3s;
+                            opacity: 0;
+                        }
+                    }
+                }
+
+                &:nth-child(odd) {
+                    transition: 0.3s;
+                    font-weight: 400;
+                }
+
+                &:nth-child(even) {
+                    font-size: clamp-px(14, 17) 17px;
+                    line-height: 130%;
+                    color: var(--black-3);
+                    font-weight: 300;
+                }
+            }
+        }
+
+
+        & .btn_border-gradient {
+            padding: 18px 20px;
+            width: 100%;
+            max-width: 174px;
+            margin-left: auto;
+            margin-right: 20px;
+        }
+    }
+}
+
+.price-table-grid {
+    display: grid;
+    // grid-template-columns: minmax(120px, 174px) minmax(280px, 448px) minmax(150px, 185px) minmax(150px, 172px);
+    grid-template-columns: repeat(4, auto);
+
+    &>div {
+        padding: 20px;
+
+        &:hover {
+            background: #fdf9f4;
+        }
+
+        &:nth-child(4n+2) {
+            max-width: 480px;
+        }
+    }
+}
+
+.price-table-title {
+    // border-radius: 30px;
+    max-width: 100% !important;
+    width: 100%;
+    background-color: #ffb471;
+    padding: clamp-px(15, 25) 0;
+
+    &:first-child {
+        border-radius: clamp-px(20, 30) 0 0 clamp-px(20, 30);
+        padding-left: clamp-px(30, 60);
+    }
+
+    &:nth-child(4) {
+        border-radius: 0 clamp-px(20, 30) clamp-px(20, 30) 0;
+        padding-right: clamp-px(30, 60);
+    }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+@include('html/head.html',{ "title": "наша жизнь", "description": "о сайте" })
+
+<body>
+  <div class="mask"></div>
+  @include('html/header.html')
+  <main>
+    <section>
+      <div class="container">
+        <h1 class="page__title">
+          Наша жизнь
+        </h1>
+      </div>
+    </section>
+    <div class="hr"></div>
+    @include('html/breadcrambs.html')
+    <section>
+      <div class="container">
+        <p class="our-life__description">
+          Здесь мы публикуем фотоотчёты с мероприятий, рассказываем новости медицинских центров и делаем анонсы событий.
+        </p>
+      </div>
+    </section>
+    @include('html/news.html')
+    @include('html/album.html')
+    @include('html/calendar.html')
+  </main>
+  @include('html/footer.html')
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- <script src="https://kit.fontawesome.com/ddb06d4443.js" crossorigin="anonymous"></script> -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script type="text/javascript" src="./assets/js/main.js"></script>
+</body>
+
+</html>

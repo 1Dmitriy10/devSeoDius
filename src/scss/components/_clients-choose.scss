@@ -1,0 +1,43 @@
+.clients-choose {
+    margin-bottom: clamp-px(40, 66);
+}
+
+.clients-choose__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.clients-choose__card-box {
+    --row-gap: clamp(1.875rem, 1.307rem + 2.42vw, 3.125rem);
+    --col-gap: clamp(1.875rem, 1.364rem + 2.18vw, 3rem);
+}
+
+.clients-choose__card {
+    display: flex;
+    flex-direction: column;
+    gap: clamp-px(20, 30);
+}
+
+.clients-choose__card-icon {
+    width: clamp-px(40, 60);
+    height: clamp-px(40, 60);
+
+    &>svg {
+        width: clamp-px(40, 60);
+        height: clamp-px(40, 60);
+    }
+}
+
+.clients-choose__card-title {
+    font-size: clamp-px(18, 20);
+    line-height: 120%;
+    color: var(--black-2);
+    font-weight: 400;
+}
+
+.clients-choose__card-text {
+    font-size: clamp-px(14, 16);
+    line-height: 140%;
+    color: var(--black-3);
+    font-weight: 300;
+}

@@ -1,0 +1,25 @@
+//======================
+summary {
+    display: flex;
+    align-items: center;
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: 9px;
+        bottom: 22px;
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        background: url(../img/values/spoiler-arrow.svg) center/60% no-repeat, var(--primary-white);
+        transition: 0.3s;
+        transform: rotate(180deg);
+    }
+
+    &.active {
+        &::after {
+            transition: 0.3s;
+            transform: rotate(0deg);
+        }
+    }
+}

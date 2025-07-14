@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('html/libs/head.html',{
+"title": "Главная"
+})
+
+<body>
+    @@include('html/libs/header.html')
+    <main>
+
+        <section class='main-banner pt_72'>
+            <div class='container main-banner__container'>
+                <div class="main-banner__text-box">
+                    <h1 class="main-banner-title">
+                        Продвижение сайтов в Москве
+                    </h1>
+
+                    <div class="main-banner__subtitle">
+                        Выводим бизнес в ТОП-10 Яндекс и Google. Бесплатный аудит до заключения договора.
+                    </div>
+
+                    <ul class="ul">
+                        <li>
+                            Подберем выигрышную стратегию под ваш бюджет и задачи
+                        </li>
+                        <li>
+                            Работаем не по шаблонам, а по собственной методологии
+                        </li>
+                        <li>
+                            Органический трафик растет через месяц продвижения
+                        </li>
+                        <li>
+                            15 лет продвигаем сайты в ТОП-10
+                        </li>
+                    </ul>
+
+                    <div class="main-banner__btn-box">
+                        <button class="btn btn_gradient main-banner__btn_gradient">
+                            <p>Заказать SEO-продвижение</p>
+                        </button>
+
+                        <button class="btn btn_border-gradient main-banner__btn_border-gradient">
+                            <p>Аудит сайта</p>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="main-banner__img-wrap">
+                    <picture>
+                        <!-- avif -->
+                        <source srcset='@img/banner/banner_bg.avif' type='image/avif' />
+                        <!-- webp -->
+                        <source srcset='@img/banner/banner_bg.webp' type='image/webp' />
+                        <!-- jpeg -->
+                        <source srcset='@img/banner/banner_bg-sm.jpeg' media='(max-width: 768px)' type='image/jpeg' />
+                        <!-- png -->
+                        <source srcset='@img/banner/banner_bg-sm.png' media='(max-width: 768px)' type='image/jpeg' />
+                        <!-- original -->
+                        <img src='@img/banner/banner_bg.png' class='img-responsive' alt='' loading='lazy' />
+                    </picture>
+                </div>
+
+            </div>
+        </section>
+
+        @@include('html/how-we-help.html')
+        @@include('html/price-prev.html')
+        @@include('html/primary-info-box.html')
+        @@include('html/time-result.html')
+        @@include('html/steps.html')
+        @@include('html/why.html')
+        @@include('html/readiness.html')
+        @@include('html/calculator.html')
+        @@include('html/what-included.html')
+        @@include('html/main-form.html')
+        @@include('html/why-profitable.html')
+        @@include('html/how-we-work.html')
+        @@include('html/portfolio-prev.html')
+        @@include('html/faq-prev.html')
+
+        <section class="main-form-section">
+            <div class="container main-form__container">
+                <h2 class="title">
+                    Заказать поисковую оптимизацию вашего сайта
+                </h2>
+
+                <div class="main-form__subtitle">
+                    Оставьте номер телефона и менеджеры свяжутся с вами
+                </div>
+
+                <form class="main-form" action="">
+
+                    <div class="form__row">
+                        <input type="text" name="tel" placeholder="Телефон*">
+                    </div>
+
+                    <div class="afree-box">
+                        <input class="afree-check" type="checkbox">
+                        <span>Оставляя номер телефона, вы подтверждаете согласие на обработку ваших данных
+                        </span>
+                    </div>
+
+                    <button class="form__btn btn btn_gradient" type="submit">
+                        <p>Заказать SEO-аудит</p>
+                    </button>
+
+
+
+                </form>
+            </div>
+        </section>
+
+        @@include('html/differences.html')
+
+    </main>
+    @@include('html/libs/footer.html')
+</body>
+
+</html>

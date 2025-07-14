@@ -1,0 +1,29 @@
+h1 {
+    @include font(var(--fw-300), clamp(1.25rem, 1.0073rem + 1.0356vw, 2.25rem), var(--primary-black), var(--lh-100));
+}
+
+h2 {
+    @include font(var(--fw-500), clamp(1.4375rem, 1.1796rem + 1.1003vw, 2.5rem), var(--primary-green), var(--lh-100));
+
+}
+
+h3 {
+    @include font(var(--fw-400), clamp(1.5625rem, 1.2564rem + 1.5306vw, 2.5rem), var(--secondary-black), var(--lh-100));
+
+}
+
+p {
+    @include font(var(--fw-300), clamp(0.9375rem, 0.9223rem + 0.0647vw, 1rem), var(--secondary-black), var(--lh-150));
+
+    &:not(:last-of-type) {
+        margin-bottom: 24px;
+    }
+
+    @include respond-to ("tel") {
+        line-height: var(--lh-140);
+    }
+}
+
+.btn {
+    @include font(var(--fw-500), clamp(0.9375rem, 0.8768rem + 0.2589vw, 1.1875rem), var(--primary-white), var(--lh-100));
+}

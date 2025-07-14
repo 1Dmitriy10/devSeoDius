@@ -1,0 +1,113 @@
+:root {
+
+
+    //container
+    .container {
+        max-width: 1300px;
+        margin: 0 auto;
+
+        @include respond-to("pc-old") {
+            max-width: 1010px;
+        }
+
+        @include respond-to("nout") {
+            max-width: 800px;
+        }
+
+        @include respond-to("tab") {
+            max-width: 650px;
+        }
+
+        @include respond-to("tel") {
+            max-width: 410px;
+        }
+
+        @include respond-to("tel-old") {
+            max-width: 325px;
+        }
+    }
+
+    section {
+        padding: 0 10px;
+    }
+
+    //===========font-family============
+
+
+    //===========color===========
+    --primary-black: #000;
+    --primary-grey:#f7f7f7;
+    --primary-green: #5a9f44;
+    --primary-white: #fff;
+    --primary-red: #df3c2d;
+
+    --secondary-black: #050505;
+    --secondary-gray: #ededed;
+    --player-1:rgba(255, 255, 255, 0.4);
+
+
+    --tertiary-grey: rgb(245, 245, 245);
+    --gradient-green: linear-gradient(224deg, #a7d275 0%, #5a9f44 100%);
+    --gradient-yellow: radial-gradient(140.96% 127.89% at 91.19% 9.88%, rgb(251, 214, 93) 0%, rgb(255, 250, 232) 100%);
+    --secondary-gradient-green: radial-gradient(138.84% 125.97% at 89.4% 10.83%, rgb(167, 210, 117) 0%, rgb(247, 255, 237) 100%);
+    --gradient-pink: radial-gradient(125.68% 125.68% at 90.48% 11.55%, rgb(253, 218, 198) 0%, rgb(255, 242, 235) 100%);
+
+    //---------font-weight--------------
+    --fw-100: 100;
+    --fw-200: 200;
+    --fw-300: 300;
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-600: 600;
+    --fw-700: 700;
+    --fw-800: 800;
+    --fw-900: 900;
+
+    //---------font-size--------------
+    --fs-8: 0.5rem;
+    --fs-10: 0.63rem;
+    --fs-12: 0.75rem;
+    --fs-14: 0.875rem;
+    --fs-15: 0.94rem;
+    --fs-16: 1rem;
+    --fs-18: 1.125rem;
+    --fs-19: 1.188rem;
+    --fs-20: 1.25rem;
+    --fs-21: 1.31rem;
+    --fs-22: 1.38rem;
+    --fs-24: 1.5rem;
+    --fs-26: 1.63rem;
+    --fs-28: 1.75rem;
+    --fs-30: 1.875rem;
+    --fs-32: 2rem;
+    --fs-34: 2.13rem;
+    --fs-35: 2.1875rem;
+    --fs-38: 2.38rem;
+    --fs-36: 2.25rem;
+    --fs-40: 2.5rem;
+    --fs-48: 3rem;
+    --fs-44: 2.75rem;
+    --fs-52: 3.25rem;
+    --fs-64: 4rem;
+    --fs-68: 4.25rem;
+    --fs-80: 5rem;
+    --fs-82: 5.13rem;
+    --fs-90: 5.63rem;
+    --fs-232: 14.5rem;
+    --fs-463: 28.94rem;
+    //----------line-height-------------
+    --lh-100: 100%;
+    --lh-110: 110%;
+    --lh-115: 115%;
+    --lh-125: 120%;
+    --lh-120: 125%;
+    --lh-130: 130%;
+    --lh-135: 135%;
+    --lh-140: 140%;
+    --lh-145: 145%;
+    --lh-150: 150%;
+    --lh-160: 160%;
+    --lh-170: 170%;
+    --lh-175: 175%;
+    --lh-180: 180%;
+}

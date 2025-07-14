@@ -1,0 +1,70 @@
+.time-result {
+    margin-bottom: clamp-px(40, 60);
+    background: url(../images/time-result/time-result-bg.png) center / contain no-repeat, var(--pink);
+
+    @include respond-to("tel") {
+        background: var(--pink);
+    }
+}
+
+.time-result__container {
+    display: flex;
+    flex-direction: column;
+    padding-top: clamp-px(25, 38);
+    padding-bottom: clamp-px(35, 65);
+}
+
+.time-result__card {
+    display: flex;
+    flex-direction: column;
+    max-width: 305px;
+
+    @include respond-to("tel") {
+        max-width: 100%;
+    }
+}
+
+.time-result__card-top {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: clamp-px(20, 28);
+
+    & .tag {
+        max-width: 182px;
+        width: 100%;
+    }
+
+
+}
+
+.time-result__card-middle {
+    display: flex;
+    flex-direction: column;
+    gap: clamp-px(20, 25);
+
+    & .ul {
+        margin-bottom: clamp-px(20, 35);
+    }
+}
+
+.time-result__card-title {
+    font-size: 20px;
+    color: var(--black);
+    font-weight: 400;
+}
+
+
+
+.time-result__card-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: clamp-px(20, 25);
+}
+
+.time-result__card-text {
+    font-size: clamp-px(14, 16);
+    line-height: 130%;
+    color: var(--black-3);
+    font-weight: 300;
+}

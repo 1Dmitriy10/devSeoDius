@@ -1,0 +1,94 @@
+.main-banner {
+    background: var(--grey);
+    // padding-top: clamp-px(50, 72) !important;
+    padding-bottom: clamp-px(20, 36) !important;
+    margin-bottom: clamp-px(30, 34);
+}
+
+.main-banner__container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.main-banner__text-box {
+    display: flex;
+    flex-direction: column;
+    max-width: 720px;
+    position: relative;
+    z-index: 2;
+
+    & .ul {
+        margin-bottom: clamp-px(40, 80) !important;
+    }
+}
+
+.main-banner-title {
+    font-size: clamp-px(24, 38);
+    color: var(--black);
+    font-weight: 400;
+    margin-bottom: clamp-px(18, 22);
+    line-height: 120%;
+}
+
+.main-banner__subtitle {
+    font-size: clamp-px(14, 18);
+    color: var(--black-2);
+    font-weight: 300;
+    line-height: 120%;
+    margin-bottom: clamp-px(20, 31);
+}
+
+
+
+.main-banner__btn-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 17px;
+
+    @include respond-to("tel") {
+        flex-direction: column;
+
+        &>.btn {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+}
+
+.main-banner__btn_border-gradient {
+    width: 100%;
+    max-width: 210px;
+
+    &::after {
+        background: var(--grey);
+    }
+}
+
+.main-banner__btn_gradient {
+    &::after {
+        background: var(--grey);
+    }
+}
+
+.main-banner__img-wrap {
+    position: absolute;
+    width: clamp-px(280, 480);
+    height: clamp-px(140, 340);
+    right: clamp-px(0, 36);
+    top: 30px;
+
+    @media (width<800px) {
+        display: none;
+
+    }
+}
+
+.img-responsive {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

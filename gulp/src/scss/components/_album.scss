@@ -1,0 +1,40 @@
+.album {
+    margin-bottom: 124px;
+
+    @include respond-to ("tel") {
+        margin-bottom: 50px;
+    }
+}
+
+.album__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.album__title {
+    margin-bottom: 34px;
+    font-size: clamp(1.4375rem, 1.2403rem + 0.8414vw, 2.25rem);
+
+    @include respond-to ("tel") {
+        margin-bottom: 26px;
+    }
+}
+
+.album__content-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-bottom: 62px;
+
+    @include respond-to ("tel") {
+        margin-bottom: 50px;
+    }
+}
+
+.btn_album {
+    align-self: center;
+}
+
+.card-item_album {
+    min-height: 355px;
+}

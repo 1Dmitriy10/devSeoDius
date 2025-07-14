@@ -1,0 +1,36 @@
+.breadcrambs {
+    margin-top: 28px;
+    margin-bottom: clamp(31px, 11.1837px + 2.7551vw, 47px);
+
+    @include respond-to ("tel") {
+        margin-top: 25px;
+    }
+}
+
+.breadcrambs__container {}
+
+.breadcrambs__list {
+    display: flex;
+    gap: 10px;
+}
+
+.breadcrambs__item {
+    @include font(var(--fw-300), clamp(0.875rem, 0.8342rem + 0.2041vw, 1rem), var(--primary-green), var(--lh-100));
+    display: flex;
+    align-items: center;
+
+    &>a {
+        @include font(var(--fw-300), clamp(0.875rem, 0.8342rem + 0.2041vw, 1rem), var(--primary-green), var(--lh-100));
+    }
+
+    &:not(:last-child) {
+        &::after {
+            content: "";
+            background: url("../img/breadcrambs-arrow.svg") center/ contain no-repeat;
+            display: block;
+            width: 5px;
+            height: 8px;
+            margin-left: 11px;
+        }
+    }
+}

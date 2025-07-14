@@ -1,0 +1,82 @@
+.main-form-section {
+    margin-bottom: clamp-px(30, 63);
+
+}
+
+.main-form__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border-radius: clamp-px(20, 30);
+    filter: drop-shadow(0px 10px 10px rgba(92, 92, 92, 0.25));
+    background-color: var(--white);
+    padding: clamp-px(30, 52) clamp-px(15, 20);
+
+    & .title {
+        text-align: center;
+        font-size: clamp-px(18, 34);
+
+        @include respond-to("tel") {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+
+
+.main-form__subtitle {
+    font-size: clamp-px(14, 28);
+    color: var(--black-2);
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: clamp-px(20, 40);
+}
+
+.main-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    & .afree-box {
+        margin-top: 22px;
+        margin-bottom: clamp-px(30, 60);
+        text-align: left;
+    }
+}
+
+.form__row {
+    width: 100%;
+    max-width: 464px;
+
+    & input {
+        width: 100%;
+        border-radius: clamp-px(16, 29);
+        background-color: #f6f6f6;
+        padding: clamp-px(15, 20) clamp-px(25, 50);
+    }
+}
+
+.afree-box {
+    font-size: 11px;
+    color: var(--placeholder);
+    font-weight: 300;
+    text-align: center;
+    display: flex
+}
+
+.afree-check {
+    accent-color: var(--placeholder);
+    margin-right: 9px;
+}
+
+.form__btn {
+    width: 100%;
+    max-width: 310px;
+    padding: clamp-px(12, 15) clamp-px(20, 25);
+
+    @include respond-to("tel") {
+        max-width: 100%;
+    }
+}

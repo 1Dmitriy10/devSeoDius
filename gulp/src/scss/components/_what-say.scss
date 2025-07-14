@@ -1,0 +1,131 @@
+.what-say {
+    background: url("../img/what-say/what-say-bg.png") no-repeat 100% 100% / 20% #f7f7f7;
+
+}
+
+.what-say__container {
+    padding: 63px 0 72px 0;
+    display: flex;
+    flex-direction: column;
+
+    @include respond-to ("tab") {
+        padding: 27px 0 39px 0;
+    }
+}
+
+.what-say__title {
+    margin-bottom: 56px;
+    font-size: clamp(1.4375rem, 1.2403rem + 0.8414vw, 2.25rem);
+
+    @include respond-to ("tab") {
+        margin-bottom: 30px;
+    }
+}
+
+.what-say__content-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px 20px;
+    margin-bottom: 72px;
+
+    @include respond-to ("nout") {
+        grid-template-columns: 1fr;
+        margin-bottom: 40px;
+    }
+
+    @include respond-to ("tel") {
+        gap: 9px 20px;
+    }
+}
+
+.what-say__item {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.05);
+    background: var(--primary-white);
+    border-radius: 15px;
+}
+
+.what-say__item_2row {
+    grid-row: span 2;
+}
+
+.what-say__item-img-wrap {
+    position: relative;
+    height: 240px;
+    width: 100%;
+    position: relative;
+    border-radius: 15px 15px 0 0;
+
+    &::after {
+        content: "";
+        position: absolute;
+        background: url("../img/what-say/what-say-mask-img.png") no-repeat 0 0 / contain;
+        display: block;
+        width: 54px;
+        height: 58px;
+        bottom: -15px;
+        left: 54px;
+    }
+
+    @include respond-to ("tab") {
+        height: 178px;
+
+        &::after {
+            width: 44px;
+            height: 44px;
+            bottom: -16px;
+            left: 19px;
+        }
+    }
+}
+
+.what-say__iyem-img {
+    border-radius: 15px 15px 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.what-say__item-content-box {
+    display: flex;
+    flex-direction: column;
+    padding: 35px 50px 42px 50px;
+
+    @include respond-to ("tab") {
+        padding: 30px 21px 29px 21px;
+    }
+}
+
+.what-say__item-title {
+    margin-bottom: 19px;
+    font-size: clamp(1.25rem, 1.1742rem + 0.3236vw, 1.5625rem);
+
+    @include respond-to ("tab") {
+        margin-bottom: 12px;
+    }
+
+
+}
+
+.what-say__item-text {
+    line-height: var(--lh-130);
+
+    &:not(:last-child) {
+        margin-bottom: 19px;
+    }
+
+    @include respond-to ("tab") {
+        line-height: var(--lh-140);
+    }
+}
+
+.btn {}
+
+.btn_what-say {
+    align-self: center;
+}

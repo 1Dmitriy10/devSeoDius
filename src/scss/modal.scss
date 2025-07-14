@@ -1,0 +1,164 @@
+.popup-form {
+    display: none;
+    flex-direction: column;
+    border-radius: clamp-px(20, 30) !important;
+    background-color: var(--white);
+    width: 100%;
+    position: relative;
+
+    & .form__row-two {
+        display: flex;
+        gap: clamp-px(15, 27);
+
+        @include respond-to("tel") {
+            flex-direction: column;
+        }
+    }
+
+    & .is-close-btn {
+        position: absolute !important;
+        top: clamp-px(20, 30) !important;
+        right: clamp-px(20, 30) !important;
+        color: transparent !important;
+        opacity: 1 !important;
+
+        &>svg {
+            & path {
+                fill: var(--red)
+            }
+        }
+    }
+
+    & .f-button {
+        background: transparent !important;
+    }
+
+}
+
+
+
+#primary-popup-form {
+    max-width: 1143px;
+}
+
+.popup-form-title {
+    margin-bottom: clamp-px(20, 36);
+    font-size: clamp-px(22, 34);
+    color: var(--black);
+    font-weight: 400;
+}
+
+.popup-form__input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    margin-bottom: clamp-px(25, 42);
+}
+
+.popup-form-subtitle {
+    font-size: clamp-px(18, 28);
+    color: var(--black-2);
+    font-weight: 300;
+    margin-bottom: clamp-px(15, 27);
+}
+
+.form__row {}
+
+.popup-form__checkbox-box {
+    display: flex;
+    gap: clamp-px(15, 20);
+    justify-content: space-between;
+    margin-bottom: clamp-px(15, 28);
+
+    & input[type=checkbox] {
+        width: clamp-px(16, 23);
+        min-width: clamp-px(16, 23);
+        height: clamp-px(16, 23);
+        accent-color: var(--red);
+    }
+
+    @include respond-to("tab") {
+        flex-direction: column;
+    }
+}
+
+.form__input-col {
+    flex: 0 1 280px;
+    max-width: 280px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    &>label {
+        font-size: clamp-px(14, 16);
+        line-height: 120%;
+        color: var(--placeholder);
+        font-weight: 300;
+    }
+
+    @include respond-to("tab") {
+        flex: 0 1 auto;
+    }
+}
+
+.popup-form__btn-box {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: clamp-px(15, 26);
+    margin-bottom: clamp-px(20, 30);
+
+}
+
+.captcha {
+    width: 132px;
+    height: 45px;
+    background-color: #9c9b9f;
+}
+
+.captcha_input {
+    border-radius: clamp-px(20, 24);
+    border: 1px solid #9c9b9f;
+    font-size: clamp-px(14, 18);
+    color: var(--placeholder);
+    font-weight: 300;
+    padding: clamp-px(12, 15) clamp-px(20, 37);
+
+    @include respond-to("tel") {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+.captcha_refresh-code {
+    width: 100%;
+    max-width: 254px;
+    // padding: clamp-px(14, 15) clamp-px(20, 37);
+
+    @include respond-to("tel") {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+.agree-box {
+    font-size: 11px;
+    color: var(--placeholder);
+    font-weight: 300;
+    font-family: "Roboto";
+    display: flex;
+    gap: 10px;
+    margin-bottom: clamp-px(15, 28);
+}
+
+.agree-check {
+    accent-color: var(--red);
+}
+
+.primary-popup-form__submit {
+    // align-self: center;
+    margin: 0 auto;
+    width: 300px;
+    max-width: 310px;
+    padding: 15px 20px;
+}

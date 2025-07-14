@@ -1,0 +1,50 @@
+.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    box-shadow: 0px 0px 10px 1px rgba(187, 185, 185, 0.4117647059);
+    padding: 12px;
+    transition: 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 100;
+}
+
+.sticky-header.show {
+    transition: 0.3s;
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav-sticky {
+    @include respond-to("tab") {
+        display: none;
+    }
+}
+
+.nav-list-sticky {
+    gap: clamp-px(20, 45);
+}
+
+.sticky-header__container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+
+    @include respond-to("tab") {
+        gap: 0;
+        justify-content: space-around;
+    }
+}
+
+.sticky-header__logo {
+    align-items: center !important;
+
+    & .logo__big-text {
+        font-size: clamp-px(34, 44);
+    }
+
+}

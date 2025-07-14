@@ -1,0 +1,8 @@
+// ================ Обрезка текста ==============
+.trim-text {
+    display: -webkit-box;
+    // кол-во колонок
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}

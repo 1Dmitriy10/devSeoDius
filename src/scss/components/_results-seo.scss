@@ -1,0 +1,42 @@
+.results-seo {}
+
+.results-seo__container {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.results-seo__card {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.results-seo__card-top {
+    display: flex;
+    gap: clamp-px(15, 20);
+}
+
+.results-seo__card-icon {
+    &>svg {
+        width: clamp-px(40, 60);
+        height: clamp-px(40, 60);
+    }
+}
+
+.results-seo__card-title {
+    font-size: clamp-px(16, 18);
+    line-height: 120%;
+    color: var(--black-2);
+    font-weight: 400;
+    font-family: "Roboto Condensed";
+}
+
+.results-seo__card-text {
+    font-size: clamp-px(14, 15);
+    line-height: 120%;
+    color: var(--black-2);
+    font-weight: 300;
+    font-family: "Roboto Condensed";
+    padding-left: calc(clamp-px(40, 60) + clamp-px(15, 20));
+}

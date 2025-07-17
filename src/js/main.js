@@ -94,6 +94,9 @@ import { gitNav } from "./libs/gitNav.js";
 //------------Звездный рейтинг---------------
 // import { starRating } from "./components/starRating.js";
 
+//------------Звездный рейтинг---------------
+import { sliderFractions } from "./components/sliderFractions.js";
+
 
 
 

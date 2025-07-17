@@ -1,51 +1,59 @@
+/*
+<div id="article-content"></div>
+
+<ul id="artigle-navigation-anchor">
+    <li class="blog-detail__nav-list-item h2">
+        <a class="blog-detail__nav-list-link" href="#${id}">
+                        
+        </a>
+    </li>
+</ul>
+*/
+
+
 export function blogNavigation() {
     function getLinkSidbar() {
     
-        let pageUrl = window.location.href;
-        let media = window.matchMedia('(max-width: 992px)')
+        let pageContent = document.querySelector("#article-content");
+        let navList = document.querySelector("#artigle-navigation-anchor");
 
+        if(!pageContent || !navList) {return null}
 
-        if (pageUrl.includes('/dz.contacc2.beget.tech/blog/')) {
-            let block = $(".blog-article__aside-nav-list");
-            let arrLink = $(".blog-article>h2");
+        let arrLink  = pageContent.querySelectorAll("h2, h3");
 
-            arrLink.each(function () {
-                if ($(this).attr("id") != "") {
-                    let name = $(this).text();
-                    if (name != "") {
-                        let id = translit(name);
-                        $(this).attr("id", `${id}`)
-                    }
+        arrLink.forEach(el=>{
+           let name = el.innerText.trim();
+                
+                if(name != "") {
+                    let id = translit(name);
+                    el.id = `${id}`
+
+                    navList.insertAdjacentHTML("beforeend", addNavItems(el))
                 }
-            })
+        })
 
-
-
-
-            arrLink.each(function () {
-                block.append(`
-                        <li class="aside__list-item">
-                        <a href="#${$(this).attr("id")}" class="aside__list-link">${$(this).text()}</a>
-                        </li>
-                        `)
-            })
-
-            $(".aside__list-link").on("click", function (event) {
-                event.preventDefault();
-                let id = $(this).attr('href')
-                $(`${id}`)[0].scrollIntoView();
-            })
+        function addNavItems(el){
+            let type = el.tagName;
+            let id = el.id
+            if(type == "H2") {
+            return `
+            <li class="blog-detail__nav-list-item h2">
+                <a class="blog-detail__nav-list-link" href="#${id}">
+                    ${el.innerText}
+                </a>
+            </li>
+            `
+            }else{
+            return `
+            <li class="blog-detail__nav-list-item h3">
+                <a class="blog-detail__nav-list-link" href="#${id}">
+                    ${el.innerText}
+                </a>
+            </li>
+            `
+            }
+            
         }
-
-        if (media.match) {
-
-        } else {
-            $(".nav_show").on("click", function () {
-                $(".news-aside__title-wrap").toggleClass("active")
-                $(".news-aside").toggleClass("show");
-            })
-        }
-
 
 
     };

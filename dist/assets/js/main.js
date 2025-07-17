@@ -14168,6 +14168,28 @@ function gitNav() {
     };
     gitNav();
 
+/***/ }),
+/* 63 */
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   sliderFractions: () => (/* binding */ sliderFractions)
+/* harmony export */ });
+function sliderFractions() {
+    let slider = document.querySelector(".how-we-work__slider");
+    let count = 1;
+    if(!slider){return null};
+
+    let itemsWrap = slider.querySelectorAll(".how-we-work__card-fraction");
+
+    itemsWrap.forEach(el=>{
+        el.innerHTML = `${count}`;
+        count++;
+    })
+};
+sliderFractions();
+
 /***/ })
 /******/ 	]);
 /************************************************************************/
@@ -14284,6 +14306,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _libs_fancybox_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(56);
 /* harmony import */ var _libs_mask_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(60);
 /* harmony import */ var _libs_gitNav_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(62);
+/* harmony import */ var _components_sliderFractions_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(63);
 //------------------------Спойлеры-----------------------
 
 
@@ -14379,6 +14402,9 @@ __webpack_require__.r(__webpack_exports__);
 
 //------------Звездный рейтинг---------------
 // import { starRating } from "./components/starRating.js";
+
+//------------Звездный рейтинг---------------
+
 
 
 
